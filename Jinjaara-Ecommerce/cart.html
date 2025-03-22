@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - JINJAARA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="font-playfair text-2xl font-bold">JINJAARA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-gray-600">Home</a>
+                    <a href="products.html" class="text-gray-900 hover:text-gray-600">Shop</a>
+                    <a href="#about" class="text-gray-900 hover:text-gray-600">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-gray-600">Contact</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <button class="md:hidden text-gray-900">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <main class="pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="font-playfair text-3xl font-bold mb-8">Shopping Cart</h1>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Cart Items -->
+                <div class="flex-grow">
+                    <!-- Cart Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-4">
+                        <div class="flex items-center gap-6">
+                            <img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg" 
+                                 alt="Summer Floral Dress" 
+                                 class="w-24 h-32 object-cover">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="font-medium mb-1">Summer Floral Dress</h3>
+                                        <p class="text-gray-600 text-sm">Size: M | Color: Pink</p>
+                                    </div>
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <div class="flex justify-between items-center mt-4">
+                                    <div class="flex items-center border rounded w-32">
+                                        <button class="px-3 py-1 hover:bg-gray-100" onclick="updateQuantity(1, -1)">-</button>
+                                        <input type="number" value="1" min="1" class="w-full text-center border-x" id="quantity1">
+                                        <button class="px-3 py-1 hover:bg-gray-100" onclick="updateQuantity(1, 1)">+</button>
+                                    </div>
+                                    <p class="font-medium">$129.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-4">
+                        <div class="flex items-center gap-6">
+                            <img src="https://images.pexels.com/photos/9558760/pexels-photo-9558760.jpeg" 
+                                 alt="Evening Gown" 
+                                 class="w-24 h-32 object-cover">
+                            <div class="flex-grow">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h3 class="font-medium mb-1">Evening Gown</h3>
+                                        <p class="text-gray-600 text-sm">Size: S | Color: Black</p>
+                                    </div>
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                                <div class="flex justify-between items-center mt-4">
+                                    <div class="flex items-center border rounded w-32">
+                                        <button class="px-3 py-1 hover:bg-gray-100" onclick="updateQuantity(2, -1)">-</button>
+                                        <input type="number" value="1" min="1" class="w-full text-center border-x" id="quantity2">
+                                        <button class="px-3 py-1 hover:bg-gray-100" onclick="updateQuantity(2, 1)">+</button>
+                                    </div>
+                                    <p class="font-medium">$249.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Empty Cart Message (Hidden when items exist) -->
+                    <div class="hidden bg-white p-8 rounded-lg shadow-sm text-center">
+                        <i class="fas fa-shopping-bag text-4xl text-gray-300 mb-4"></i>
+                        <h2 class="text-xl font-medium mb-2">Your cart is empty</h2>
+                        <p class="text-gray-600 mb-6">Looks like you haven't added any items to your cart yet.</p>
+                        <a href="products.html" class="inline-block bg-black text-white px-6 py-2 rounded hover:bg-gray-900 transition">
+                            Continue Shopping
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="lg:w-96">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="font-medium text-lg mb-6">Order Summary</h2>
+                        
+                        <!-- Subtotal -->
+                        <div class="flex justify-between mb-4">
+                            <span class="text-gray-600">Subtotal</span>
+                            <span>$378.00</span>
+                        </div>
+
+                        <!-- Shipping -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-600">Shipping</span>
+                                <span>Calculated at checkout</span>
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                Free shipping on orders over $100
+                            </div>
+                        </div>
+
+                        <!-- Promo Code -->
+                        <div class="border-t border-b py-4 mb-4">
+                            <div class="flex gap-2">
+                                <input type="text" 
+                                       placeholder="Enter promo code" 
+                                       class="flex-grow px-3 py-2 border rounded">
+                                <button class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Total -->
+                        <div class="flex justify-between mb-6">
+                            <span class="font-medium">Total</span>
+                            <span class="font-medium">$378.00</span>
+                        </div>
+
+                        <!-- Checkout Button -->
+                            <a href="checkout.html" class="block w-full bg-black text-white text-center py-3 rounded hover:bg-gray-900 transition">
+                            Proceed to Checkout
+                        </a>
+
+                        <!-- Continue Shopping -->
+                            <a href="products.html" class="block w-full text-center mt-4 text-gray-600 hover:text-gray-900">
+                            Continue Shopping
+                        </a>
+                    </div>
+
+                    <!-- Secure Checkout Info -->
+                    <div class="mt-6 p-4 bg-white rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4 text-gray-600">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure Checkout</span>
+                        </div>
+                        <div class="mt-4 flex gap-2">
+                            <i class="fab fa-cc-visa text-2xl"></i>
+                            <i class="fab fa-cc-mastercard text-2xl"></i>
+                            <i class="fab fa-cc-amex text-2xl"></i>
+                            <i class="fab fa-cc-paypal text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recently Viewed -->
+            <div class="mt-16">
+                <h2 class="font-playfair text-2xl font-bold mb-8">Recently Viewed</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Product 1 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/9558574/pexels-photo-9558574.jpeg" 
+                                 alt="Casual Blouse" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Casual Blouse</h3>
+                            <p class="text-gray-600">$89.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg" 
+                                 alt="Summer Top" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Summer Top</h3>
+                            <p class="text-gray-600">$69.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/6626967/pexels-photo-6626967.jpeg" 
+                                 alt="Floral Skirt" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Floral Skirt</h3>
+                            <p class="text-gray-600">$79.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg" 
+                                 alt="Summer Dress" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Summer Dress</h3>
+                            <p class="text-gray-600">$129.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-600">Fashion Redefined</p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="/" class="hover:text-gray-900">Home</a></li>
+                        <li><a href="/products.html" class="hover:text-gray-900">Shop</a></li>
+                        <li><a href="#about" class="hover:text-gray-900">About</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Help</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Returns</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-gray-900">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Connect</h4>
+                    <div class="flex space-x-4 text-gray-600">
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t mt-12 pt-8 text-center text-gray-600">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="bg-white h-full w-64 p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-playfair text-xl font-bold">Menu</span>
+                <button class="text-gray-900">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="index.html" class="block text-gray-900 hover:text-gray-600">Home</a>
+                <a href="products.html" class="block text-gray-900 hover:text-gray-600">Shop</a>
+                <a href="#about" class="block text-gray-900 hover:text-gray-600">About</a>
+                <a href="#contact" class="block text-gray-900 hover:text-gray-600">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('.fixed.inset-0');
+        const closeButton = mobileMenu.querySelector('button');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Quantity update
+        function updateQuantity(itemId, change) {
+            const input = document.getElementById('quantity' + itemId);
+            const newValue = parseInt(input.value) + change;
+            if (newValue >= 1) {
+                input.value = newValue;
+                // Here you would typically update the cart total
+                updateCartTotal();
+            }
+        }
+
+        // Update cart total (placeholder function)
+        function updateCartTotal() {
+            // This would typically involve calculating the new total based on quantities and prices
+            console.log('Cart total updated');
+        }
+    </script>
+</body>
+</html>
