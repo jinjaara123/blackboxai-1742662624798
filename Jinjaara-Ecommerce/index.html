@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINJAARA – Fashion Redefined</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="font-playfair text-2xl font-bold">JINJAARA</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-gray-600">Home</a>
+                    
+                    <!-- Women Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Women
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=women-dresses" class="block py-2 text-gray-900 hover:text-gray-600">Dresses</a>
+                            <a href="products.html?category=women-tops" class="block py-2 text-gray-900 hover:text-gray-600">Tops</a>
+                            <a href="products.html?category=women-bottoms" class="block py-2 text-gray-900 hover:text-gray-600">Bottoms</a>
+                            <a href="products.html?category=women-outerwear" class="block py-2 text-gray-900 hover:text-gray-600">Outerwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Men
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=men-shirts" class="block py-2 text-gray-900 hover:text-gray-600">Shirts</a>
+                            <a href="products.html?category=men-pants" class="block py-2 text-gray-900 hover:text-gray-600">Pants</a>
+                            <a href="products.html?category=men-suits" class="block py-2 text-gray-900 hover:text-gray-600">Suits</a>
+                            <a href="products.html?category=men-outerwear" class="block py-2 text-gray-900 hover:text-gray-600">Outerwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Jewellery Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Jewellery
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=necklaces" class="block py-2 text-gray-900 hover:text-gray-600">Necklaces</a>
+                            <a href="products.html?category=earrings" class="block py-2 text-gray-900 hover:text-gray-600">Earrings</a>
+                            <a href="products.html?category=bracelets" class="block py-2 text-gray-900 hover:text-gray-600">Bracelets</a>
+                            <a href="products.html?category=rings" class="block py-2 text-gray-900 hover:text-gray-600">Rings</a>
+                        </div>
+                    </div>
+
+                    <!-- Sale -->
+                    <a href="products.html?category=sale" class="text-red-600 hover:text-red-500 font-medium">Sale</a>
+                    
+                    <a href="#about" class="text-gray-900 hover:text-gray-600">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-gray-600">Contact</a>
+                </div>
+
+                <!-- Icons -->
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-900">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg')] bg-cover bg-center">
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+        <div class="relative h-full flex items-center justify-center text-center text-white px-4">
+            <div class="max-w-3xl">
+                <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6">Redefine Your Style</h1>
+                <p class="text-xl mb-8">Discover the latest in contemporary fashion</p>
+                <a href="products.html" class="inline-block bg-white text-black px-8 py-3 text-lg font-medium hover:bg-gray-100 transition duration-300">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-playfair text-3xl md:text-4xl text-center mb-12">Featured Collections</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Collection 1 -->
+                <div class="group relative overflow-hidden">
+                    <img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg" alt="Summer Collection" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="products.html" class="bg-white text-black px-6 py-2 font-medium">Summer Collection</a>
+                    </div>
+                </div>
+                <!-- Collection 2 -->
+                <div class="group relative overflow-hidden">
+                    <img src="https://images.pexels.com/photos/9558760/pexels-photo-9558760.jpeg" alt="Autumn Essentials" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="products.html" class="bg-white text-black px-6 py-2 font-medium">Autumn Essentials</a>
+                    </div>
+                </div>
+                <!-- Collection 3 -->
+                <div class="group relative overflow-hidden">
+                    <img src="https://images.pexels.com/photos/9558574/pexels-photo-9558574.jpeg" alt="Evening Wear" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <a href="products.html" class="bg-white text-black px-6 py-2 font-medium">Evening Wear</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.pexels.com/photos/6626967/pexels-photo-6626967.jpeg" alt="About JINJAARA" class="w-full h-[600px] object-cover">
+                </div>
+                <div>
+                    <h2 class="font-playfair text-3xl md:text-4xl mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-6">JINJAARA was born from a passion for creating timeless pieces that blend contemporary design with traditional craftsmanship. Our commitment to quality and sustainability shapes every aspect of our creative process.</p>
+                    <p class="text-gray-600 mb-8">We believe in fashion that empowers, clothes that make you feel as good as you look. Each piece is thoughtfully designed and crafted to become a lasting part of your wardrobe.</p>
+                    <a href="#" class="inline-block border-2 border-black px-8 py-3 text-lg font-medium hover:bg-black hover:text-white transition duration-300">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl md:text-4xl mb-6">Join Our Newsletter</h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Stay updated with our latest collections, style guides, and exclusive offers.</p>
+            <form class="max-w-md mx-auto flex gap-4">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 text-black">
+                <button type="submit" class="bg-white text-black px-8 py-3 font-medium hover:bg-gray-200 transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-600">Fashion Redefined</p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="/" class="hover:text-gray-900">Home</a></li>
+                        <li><a href="/products.html" class="hover:text-gray-900">Shop</a></li>
+                        <li><a href="#about" class="hover:text-gray-900">About</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Help</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Returns</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-gray-900">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Connect</h4>
+                    <div class="flex space-x-4 text-gray-600">
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t mt-12 pt-8 text-center text-gray-600">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="bg-white h-full w-64 p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-playfair text-xl font-bold">Menu</span>
+                <button class="text-gray-900">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="index.html" class="block text-gray-900 hover:text-gray-600">Home</a>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Women</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=women-dresses" class="block text-gray-600 hover:text-gray-900">Dresses</a>
+                        <a href="products.html?category=women-tops" class="block text-gray-600 hover:text-gray-900">Tops</a>
+                        <a href="products.html?category=women-bottoms" class="block text-gray-600 hover:text-gray-900">Bottoms</a>
+                        <a href="products.html?category=women-outerwear" class="block text-gray-600 hover:text-gray-900">Outerwear</a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Men</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=men-shirts" class="block text-gray-600 hover:text-gray-900">Shirts</a>
+                        <a href="products.html?category=men-pants" class="block text-gray-600 hover:text-gray-900">Pants</a>
+                        <a href="products.html?category=men-suits" class="block text-gray-600 hover:text-gray-900">Suits</a>
+                        <a href="products.html?category=men-outerwear" class="block text-gray-600 hover:text-gray-900">Outerwear</a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Jewellery</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=necklaces" class="block text-gray-600 hover:text-gray-900">Necklaces</a>
+                        <a href="products.html?category=earrings" class="block text-gray-600 hover:text-gray-900">Earrings</a>
+                        <a href="products.html?category=bracelets" class="block text-gray-600 hover:text-gray-900">Bracelets</a>
+                        <a href="products.html?category=rings" class="block text-gray-600 hover:text-gray-900">Rings</a>
+                    </div>
+                </div>
+                <a href="products.html?category=sale" class="block text-red-600 hover:text-red-500 font-medium">Sale</a>
+                <a href="#about" class="block text-gray-900 hover:text-gray-600">About</a>
+                <a href="#contact" class="block text-gray-900 hover:text-gray-600">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('.fixed.inset-0');
+        const closeButton = mobileMenu.querySelector('button');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
