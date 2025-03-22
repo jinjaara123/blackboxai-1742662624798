@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Collection - JINJAARA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Navigation (Same as index.html) -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="font-playfair text-2xl font-bold">JINJAARA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-gray-600">Home</a>
+                    
+                    <!-- Women Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Women
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=women-dresses" class="block py-2 text-gray-900 hover:text-gray-600">Dresses</a>
+                            <a href="products.html?category=women-tops" class="block py-2 text-gray-900 hover:text-gray-600">Tops</a>
+                            <a href="products.html?category=women-bottoms" class="block py-2 text-gray-900 hover:text-gray-600">Bottoms</a>
+                            <a href="products.html?category=women-outerwear" class="block py-2 text-gray-900 hover:text-gray-600">Outerwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Men
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=men-shirts" class="block py-2 text-gray-900 hover:text-gray-600">Shirts</a>
+                            <a href="products.html?category=men-pants" class="block py-2 text-gray-900 hover:text-gray-600">Pants</a>
+                            <a href="products.html?category=men-suits" class="block py-2 text-gray-900 hover:text-gray-600">Suits</a>
+                            <a href="products.html?category=men-outerwear" class="block py-2 text-gray-900 hover:text-gray-600">Outerwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Jewellery Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Jewellery
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=necklaces" class="block py-2 text-gray-900 hover:text-gray-600">Necklaces</a>
+                            <a href="products.html?category=earrings" class="block py-2 text-gray-900 hover:text-gray-600">Earrings</a>
+                            <a href="products.html?category=bracelets" class="block py-2 text-gray-900 hover:text-gray-600">Bracelets</a>
+                            <a href="products.html?category=rings" class="block py-2 text-gray-900 hover:text-gray-600">Rings</a>
+                        </div>
+                    </div>
+
+                    <!-- Sale -->
+                    <a href="products.html?category=sale" class="text-red-600 hover:text-red-500 font-medium">Sale</a>
+                    
+                    <a href="#about" class="text-gray-900 hover:text-gray-600">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-gray-600">Contact</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <button class="md:hidden text-gray-900">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-24 pb-12 text-center">
+        <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-4">Our Collection</h1>
+        <p class="text-gray-600">Discover our latest pieces</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 pb-20">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Filters Sidebar -->
+            <aside class="w-full md:w-64 space-y-6">
+                <!-- Categories -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-medium mb-4">Categories</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="ml-2">Dresses</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="ml-2">Tops</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="ml-2">Bottoms</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="ml-2">Outerwear</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="ml-2">Accessories</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Range -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-medium mb-4">Price Range</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="price" class="form-radio">
+                            <span class="ml-2">Under $50</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="price" class="form-radio">
+                            <span class="ml-2">$50 - $100</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="price" class="form-radio">
+                            <span class="ml-2">$100 - $200</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="price" class="form-radio">
+                            <span class="ml-2">$200+</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Size -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-medium mb-4">Size</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button class="border p-2 rounded hover:bg-black hover:text-white transition">XS</button>
+                        <button class="border p-2 rounded hover:bg-black hover:text-white transition">S</button>
+                        <button class="border p-2 rounded hover:bg-black hover:text-white transition">M</button>
+                        <button class="border p-2 rounded hover:bg-black hover:text-white transition">L</button>
+                        <button class="border p-2 rounded hover:bg-black hover:text-white transition">XL</button>
+                        <button class="border p-2 rounded hover:bg-black hover:text-white transition">XXL</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <div class="flex-1">
+                <!-- Sort Options -->
+                <div class="flex justify-between items-center mb-6">
+                    <p class="text-gray-600">Showing 12 products</p>
+                    <select class="border rounded p-2">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg" alt="Summer Dress" class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Summer Floral Dress</h3>
+                            <p class="text-gray-600">$129.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/9558760/pexels-photo-9558760.jpeg" alt="Evening Dress" class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Evening Gown</h3>
+                            <p class="text-gray-600">$249.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/9558574/pexels-photo-9558574.jpeg" alt="Casual Top" class="w-full h-[400px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Casual Blouse</h3>
+                            <p class="text-gray-600">$89.00</p>
+                        </div>
+                    </div>
+
+                    <!-- More Product Cards (4-12) -->
+                    <!-- Repeat the product card structure with different images and details -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-12 flex justify-center space-x-2">
+                    <button class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">1</button>
+                    <button class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">2</button>
+                    <button class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">3</button>
+                    <button class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-black hover:text-white transition">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-600">Fashion Redefined</p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="/" class="hover:text-gray-900">Home</a></li>
+                        <li><a href="/products.html" class="hover:text-gray-900">Shop</a></li>
+                        <li><a href="#about" class="hover:text-gray-900">About</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Help</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Returns</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-gray-900">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Connect</h4>
+                    <div class="flex space-x-4 text-gray-600">
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t mt-12 pt-8 text-center text-gray-600">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="bg-white h-full w-64 p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-playfair text-xl font-bold">Menu</span>
+                <button class="text-gray-900">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="index.html" class="block text-gray-900 hover:text-gray-600">Home</a>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Women</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=women-dresses" class="block text-gray-600 hover:text-gray-900">Dresses</a>
+                        <a href="products.html?category=women-tops" class="block text-gray-600 hover:text-gray-900">Tops</a>
+                        <a href="products.html?category=women-bottoms" class="block text-gray-600 hover:text-gray-900">Bottoms</a>
+                        <a href="products.html?category=women-outerwear" class="block text-gray-600 hover:text-gray-900">Outerwear</a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Men</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=men-shirts" class="block text-gray-600 hover:text-gray-900">Shirts</a>
+                        <a href="products.html?category=men-pants" class="block text-gray-600 hover:text-gray-900">Pants</a>
+                        <a href="products.html?category=men-suits" class="block text-gray-600 hover:text-gray-900">Suits</a>
+                        <a href="products.html?category=men-outerwear" class="block text-gray-600 hover:text-gray-900">Outerwear</a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Jewellery</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=necklaces" class="block text-gray-600 hover:text-gray-900">Necklaces</a>
+                        <a href="products.html?category=earrings" class="block text-gray-600 hover:text-gray-900">Earrings</a>
+                        <a href="products.html?category=bracelets" class="block text-gray-600 hover:text-gray-900">Bracelets</a>
+                        <a href="products.html?category=rings" class="block text-gray-600 hover:text-gray-900">Rings</a>
+                    </div>
+                </div>
+                <a href="products.html?category=sale" class="block text-red-600 hover:text-red-500 font-medium">Sale</a>
+                <a href="#about" class="block text-gray-900 hover:text-gray-600">About</a>
+                <a href="#contact" class="block text-gray-900 hover:text-gray-600">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('.fixed.inset-0');
+        const closeButton = mobileMenu.querySelector('button');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
