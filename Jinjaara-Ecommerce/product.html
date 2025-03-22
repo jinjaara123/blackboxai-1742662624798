@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Floral Dress - JINJAARA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="font-poppins">
+    <!-- Navigation (Same as other pages) -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="font-playfair text-2xl font-bold">JINJAARA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-gray-600">Home</a>
+                    
+                    <!-- Women Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Women
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=women-dresses" class="block py-2 text-gray-900 hover:text-gray-600">Dresses</a>
+                            <a href="products.html?category=women-tops" class="block py-2 text-gray-900 hover:text-gray-600">Tops</a>
+                            <a href="products.html?category=women-bottoms" class="block py-2 text-gray-900 hover:text-gray-600">Bottoms</a>
+                            <a href="products.html?category=women-outerwear" class="block py-2 text-gray-900 hover:text-gray-600">Outerwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Men Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Men
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=men-shirts" class="block py-2 text-gray-900 hover:text-gray-600">Shirts</a>
+                            <a href="products.html?category=men-pants" class="block py-2 text-gray-900 hover:text-gray-600">Pants</a>
+                            <a href="products.html?category=men-suits" class="block py-2 text-gray-900 hover:text-gray-600">Suits</a>
+                            <a href="products.html?category=men-outerwear" class="block py-2 text-gray-900 hover:text-gray-600">Outerwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Jewellery Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-900 hover:text-gray-600 py-4">
+                            Jewellery
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 bg-white shadow-lg py-2 px-4 rounded-lg w-48 hidden group-hover:block">
+                            <a href="products.html?category=necklaces" class="block py-2 text-gray-900 hover:text-gray-600">Necklaces</a>
+                            <a href="products.html?category=earrings" class="block py-2 text-gray-900 hover:text-gray-600">Earrings</a>
+                            <a href="products.html?category=bracelets" class="block py-2 text-gray-900 hover:text-gray-600">Bracelets</a>
+                            <a href="products.html?category=rings" class="block py-2 text-gray-900 hover:text-gray-600">Rings</a>
+                        </div>
+                    </div>
+
+                    <!-- Sale -->
+                    <a href="products.html?category=sale" class="text-red-600 hover:text-red-500 font-medium">Sale</a>
+                    
+                    <a href="#about" class="text-gray-900 hover:text-gray-600">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-gray-600">Contact</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <button class="md:hidden text-gray-900">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <main class="pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm">
+                <ol class="flex items-center space-x-2">
+                    <li><a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                    <li><span class="text-gray-400">/</span></li>
+                    <li><a href="products.html" class="text-gray-600 hover:text-gray-900">Shop</a></li>
+                    <li><span class="text-gray-400">/</span></li>
+                    <li class="text-gray-900">Summer Floral Dress</li>
+                </ol>
+            </nav>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Product Images -->
+                <div class="space-y-4">
+                    <!-- Main Image -->
+                    <div class="aspect-w-3 aspect-h-4">
+                        <img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg" 
+                             alt="Summer Floral Dress" 
+                             class="w-full h-[600px] object-cover" 
+                             id="mainImage">
+                    </div>
+                    <!-- Thumbnail Gallery -->
+                    <div class="grid grid-cols-4 gap-4">
+                        <button class="thumbnail-btn active" onclick="changeImage('https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg')">
+                            <img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg" 
+                                 alt="Thumbnail 1" 
+                                 class="w-full h-24 object-cover">
+                        </button>
+                        <button class="thumbnail-btn" onclick="changeImage('https://images.pexels.com/photos/9558760/pexels-photo-9558760.jpeg')">
+                            <img src="https://images.pexels.com/photos/9558760/pexels-photo-9558760.jpeg" 
+                                 alt="Thumbnail 2" 
+                                 class="w-full h-24 object-cover">
+                        </button>
+                        <button class="thumbnail-btn" onclick="changeImage('https://images.pexels.com/photos/9558574/pexels-photo-9558574.jpeg')">
+                            <img src="https://images.pexels.com/photos/9558574/pexels-photo-9558574.jpeg" 
+                                 alt="Thumbnail 3" 
+                                 class="w-full h-24 object-cover">
+                        </button>
+                        <button class="thumbnail-btn" onclick="changeImage('https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg')">
+                            <img src="https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg" 
+                                 alt="Thumbnail 4" 
+                                 class="w-full h-24 object-cover">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div>
+                    <h1 class="font-playfair text-3xl font-bold mb-4">Summer Floral Dress</h1>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="ml-2 text-gray-600">(24 reviews)</span>
+                    </div>
+                    <p class="text-2xl font-medium mb-6">$129.00</p>
+                    
+                    <!-- Product Description -->
+                    <div class="prose prose-sm mb-8">
+                        <p class="text-gray-600 mb-4">
+                            A stunning floral dress perfect for summer occasions. Made from lightweight, breathable fabric 
+                            with a flattering cut that suits all body types. Features a subtle floral pattern and 
+                            comfortable elastic waistband.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>100% premium cotton</li>
+                            <li>Breathable fabric</li>
+                            <li>Side pockets</li>
+                            <li>Adjustable waist tie</li>
+                        </ul>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="mb-6">
+                        <h3 class="font-medium mb-3">Color</h3>
+                        <div class="flex space-x-3">
+                            <button class="w-8 h-8 rounded-full bg-pink-200 border-2 border-pink-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"></button>
+                            <button class="w-8 h-8 rounded-full bg-blue-200 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"></button>
+                            <button class="w-8 h-8 rounded-full bg-green-200 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"></button>
+                        </div>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="font-medium">Size</h3>
+                            <button class="text-sm text-gray-600 hover:text-gray-900">Size Guide</button>
+                        </div>
+                        <div class="grid grid-cols-5 gap-2">
+                            <button class="border rounded py-2 hover:bg-black hover:text-white transition">XS</button>
+                            <button class="border rounded py-2 hover:bg-black hover:text-white transition">S</button>
+                            <button class="border rounded py-2 bg-black text-white">M</button>
+                            <button class="border rounded py-2 hover:bg-black hover:text-white transition">L</button>
+                            <button class="border rounded py-2 hover:bg-black hover:text-white transition">XL</button>
+                        </div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="mb-8">
+                        <h3 class="font-medium mb-3">Quantity</h3>
+                        <div class="flex items-center border rounded w-32">
+                            <button class="px-3 py-2 hover:bg-gray-100" onclick="updateQuantity(-1)">-</button>
+                            <input type="number" value="1" min="1" class="w-full text-center border-x" id="quantity">
+                            <button class="px-3 py-2 hover:bg-gray-100" onclick="updateQuantity(1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="space-y-4">
+                        <button class="w-full bg-black text-white py-3 px-6 rounded hover:bg-gray-900 transition">
+                            Add to Cart
+                        </button>
+                        <button class="w-full border border-black py-3 px-6 rounded hover:bg-gray-50 transition">
+                            Add to Wishlist
+                        </button>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div class="mt-8 border-t pt-8 space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-truck text-xl w-8"></i>
+                            <span class="ml-2">Free shipping on orders over $100</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-undo text-xl w-8"></i>
+                            <span class="ml-2">30-day return policy</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-xl w-8"></i>
+                            <span class="ml-2">Secure checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Details Tabs -->
+            <div class="mt-16">
+                <div class="border-b">
+                    <nav class="flex space-x-8">
+                        <button class="border-b-2 border-black px-4 py-2 text-sm font-medium">Description</button>
+                        <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Additional Information</button>
+                        <button class="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-700">Reviews (24)</button>
+                    </nav>
+                </div>
+                <div class="py-8">
+                    <div class="prose max-w-none">
+                        <p class="mb-4">
+                            The Summer Floral Dress is the perfect addition to your warm-weather wardrobe. Crafted from 
+                            premium cotton, this dress features a beautiful floral pattern that's both elegant and playful.
+                        </p>
+                        <p class="mb-4">
+                            The adjustable waist tie allows you to create the perfect fit, while the side pockets add 
+                            practical functionality to this stylish piece. The breathable fabric ensures comfort throughout 
+                            the day, making it ideal for both casual outings and special occasions.
+                        </p>
+                        <h3 class="font-medium mb-2">Features:</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Premium cotton fabric</li>
+                            <li>Floral pattern</li>
+                            <li>Adjustable waist tie</li>
+                            <li>Side pockets</li>
+                            <li>Machine washable</li>
+                        </ul>
+                        <p>
+                            Available in multiple colors and sizes, this versatile dress can be dressed up with heels 
+                            for a special event or worn casually with sandals for a day out.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="mt-16">
+                <h2 class="font-playfair text-2xl font-bold mb-8">You May Also Like</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Related Product 1 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/9558760/pexels-photo-9558760.jpeg" 
+                                 alt="Related Product 1" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Evening Gown</h3>
+                            <p class="text-gray-600">$249.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Related Product 2 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/9558574/pexels-photo-9558574.jpeg" 
+                                 alt="Related Product 2" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Casual Blouse</h3>
+                            <p class="text-gray-600">$89.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Related Product 3 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg" 
+                                 alt="Related Product 3" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Summer Top</h3>
+                            <p class="text-gray-600">$69.00</p>
+                        </div>
+                    </div>
+
+                    <!-- Related Product 4 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/6626967/pexels-photo-6626967.jpeg" 
+                                 alt="Related Product 4" 
+                                 class="w-full h-[300px] object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <button class="bg-white text-black px-6 py-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    Quick View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-lg font-medium">Floral Skirt</h3>
+                            <p class="text-gray-600">$79.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-600">Fashion Redefined</p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="/" class="hover:text-gray-900">Home</a></li>
+                        <li><a href="/products.html" class="hover:text-gray-900">Shop</a></li>
+                        <li><a href="#about" class="hover:text-gray-900">About</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Help</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Returns</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-gray-900">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Connect</h4>
+                    <div class="flex space-x-4 text-gray-600">
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t mt-12 pt-8 text-center text-gray-600">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="bg-white h-full w-64 p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-playfair text-xl font-bold">Menu</span>
+                <button class="text-gray-900">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="index.html" class="block text-gray-900 hover:text-gray-600">Home</a>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Women</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=women-dresses" class="block text-gray-600 hover:text-gray-900">Dresses</a>
+                        <a href="products.html?category=women-tops" class="block text-gray-600 hover:text-gray-900">Tops</a>
+                        <a href="products.html?category=women-bottoms" class="block text-gray-600 hover:text-gray-900">Bottoms</a>
+                        <a href="products.html?category=women-outerwear" class="block text-gray-600 hover:text-gray-900">Outerwear</a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Men</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=men-shirts" class="block text-gray-600 hover:text-gray-900">Shirts</a>
+                        <a href="products.html?category=men-pants" class="block text-gray-600 hover:text-gray-900">Pants</a>
+                        <a href="products.html?category=men-suits" class="block text-gray-600 hover:text-gray-900">Suits</a>
+                        <a href="products.html?category=men-outerwear" class="block text-gray-600 hover:text-gray-900">Outerwear</a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <div class="font-medium mb-2">Jewellery</div>
+                    <div class="pl-4 space-y-2">
+                        <a href="products.html?category=necklaces" class="block text-gray-600 hover:text-gray-900">Necklaces</a>
+                        <a href="products.html?category=earrings" class="block text-gray-600 hover:text-gray-900">Earrings</a>
+                        <a href="products.html?category=bracelets" class="block text-gray-600 hover:text-gray-900">Bracelets</a>
+                        <a href="products.html?category=rings" class="block text-gray-600 hover:text-gray-900">Rings</a>
+                    </div>
+                </div>
+                <a href="products.html?category=sale" class="block text-red-600 hover:text-red-500 font-medium">Sale</a>
+                <a href="#about" class="block text-gray-900 hover:text-gray-600">About</a>
+                <a href="#contact" class="block text-gray-900 hover:text-gray-600">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('.fixed.inset-0');
+        const closeButton = mobileMenu.querySelector('button');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Image gallery
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+            // Update active state of thumbnails
+            document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+                if (btn.querySelector('img').src === src) {
+                    btn.classList.add('ring-2', 'ring-black');
+                } else {
+                    btn.classList.remove('ring-2', 'ring-black');
+                }
+            });
+        }
+
+        // Quantity update
+        function updateQuantity(change) {
+            const input = document.getElementById('quantity');
+            const newValue = parseInt(input.value) + change;
+            if (newValue >= 1) {
+                input.value = newValue;
+            }
+        }
+    </script>
+</body>
+</html>
