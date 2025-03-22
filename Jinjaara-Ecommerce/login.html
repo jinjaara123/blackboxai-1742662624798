@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JINJAARA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="font-playfair text-2xl font-bold">JINJAARA</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-gray-600">Home</a>
+                    <a href="products.html" class="text-gray-900 hover:text-gray-600">Shop</a>
+                    <a href="#about" class="text-gray-900 hover:text-gray-600">About</a>
+                    <a href="#contact" class="text-gray-900 hover:text-gray-600">Contact</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="login.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="text-gray-900 hover:text-gray-600">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <button class="md:hidden text-gray-900">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login/Register Section -->
+    <main class="min-h-screen pt-24 pb-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="max-w-md mx-auto">
+                <!-- Form Toggle Buttons -->
+                <div class="flex mb-8">
+                    <button class="flex-1 py-3 text-center font-medium border-b-2 border-black" id="loginTab">
+                        Login
+                    </button>
+                    <button class="flex-1 py-3 text-center font-medium border-b text-gray-500" id="registerTab">
+                        Register
+                    </button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="loginForm" class="bg-white p-8 rounded-lg shadow-sm">
+                    <h2 class="text-2xl font-playfair font-bold mb-6">Welcome Back</h2>
+                    
+                    <!-- Social Login -->
+                    <div class="space-y-3 mb-6">
+                        <button class="w-full flex items-center justify-center gap-3 border rounded-lg py-3 hover:bg-gray-50 transition">
+                            <i class="fab fa-google text-red-500"></i>
+                            Continue with Google
+                        </button>
+                        <button class="w-full flex items-center justify-center gap-3 border rounded-lg py-3 hover:bg-gray-50 transition">
+                            <i class="fab fa-facebook text-blue-600"></i>
+                            Continue with Facebook
+                        </button>
+                    </div>
+
+                    <div class="relative my-6">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-4 bg-white text-gray-500">Or continue with</span>
+                        </div>
+                    </div>
+
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email Address</label>
+                            <input type="email" 
+                                   class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:outline-none" 
+                                   required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Password</label>
+                            <input type="password" 
+                                   class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:outline-none" 
+                                   required>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="mr-2">
+                                <span class="text-sm">Remember me</span>
+                            </label>
+                            <a href="#" class="text-sm text-gray-600 hover:text-black">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-900 transition">
+                            Login
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Register Form (Hidden by default) -->
+                <div id="registerForm" class="hidden bg-white p-8 rounded-lg shadow-sm">
+                    <h2 class="text-2xl font-playfair font-bold mb-6">Create Account</h2>
+                    
+                    <!-- Social Register -->
+                    <div class="space-y-3 mb-6">
+                        <button class="w-full flex items-center justify-center gap-3 border rounded-lg py-3 hover:bg-gray-50 transition">
+                            <i class="fab fa-google text-red-500"></i>
+                            Sign up with Google
+                        </button>
+                        <button class="w-full flex items-center justify-center gap-3 border rounded-lg py-3 hover:bg-gray-50 transition">
+                            <i class="fab fa-facebook text-blue-600"></i>
+                            Sign up with Facebook
+                        </button>
+                    </div>
+
+                    <div class="relative my-6">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-4 bg-white text-gray-500">Or register with email</span>
+                        </div>
+                    </div>
+
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">First Name</label>
+                                <input type="text" 
+                                       class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:outline-none" 
+                                       required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Last Name</label>
+                                <input type="text" 
+                                       class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:outline-none" 
+                                       required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email Address</label>
+                            <input type="email" 
+                                   class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:outline-none" 
+                                   required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Password</label>
+                            <input type="password" 
+                                   class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:outline-none" 
+                                   required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Confirm Password</label>
+                            <input type="password" 
+                                   class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-black focus:outline-none" 
+                                   required>
+                        </div>
+                        <div class="flex items-start">
+                            <input type="checkbox" class="mt-1 mr-2" required>
+                            <span class="text-sm text-gray-600">
+                                I agree to the 
+                                <a href="#" class="text-black hover:underline">Terms of Service</a> 
+                                and 
+                                <a href="#" class="text-black hover:underline">Privacy Policy</a>
+                            </span>
+                        </div>
+                        <button type="submit" class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-900 transition">
+                            Create Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-playfair text-xl font-bold mb-4">JINJAARA</h3>
+                    <p class="text-gray-600">Fashion Redefined</p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="/" class="hover:text-gray-900">Home</a></li>
+                        <li><a href="/products.html" class="hover:text-gray-900">Shop</a></li>
+                        <li><a href="#about" class="hover:text-gray-900">About</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Help</h4>
+                    <ul class="space-y-2 text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Returns</a></li>
+                        <li><a href="#" class="hover:text-gray-900">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-gray-900">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Connect</h4>
+                    <div class="flex space-x-4 text-gray-600">
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-gray-900"><i class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t mt-12 pt-8 text-center text-gray-600">
+                <p>&copy; 2024 JINJAARA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="bg-white h-full w-64 p-6">
+            <div class="flex justify-between items-center mb-8">
+                <span class="font-playfair text-xl font-bold">Menu</span>
+                <button class="text-gray-900">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="space-y-4">
+                <a href="index.html" class="block text-gray-900 hover:text-gray-600">Home</a>
+                <a href="products.html" class="block text-gray-900 hover:text-gray-600">Shop</a>
+                <a href="#about" class="block text-gray-900 hover:text-gray-600">About</a>
+                <a href="#contact" class="block text-gray-900 hover:text-gray-600">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('.fixed.inset-0');
+        const closeButton = mobileMenu.querySelector('button');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Login/Register form toggle
+        const loginTab = document.getElementById('loginTab');
+        const registerTab = document.getElementById('registerTab');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('border-black', 'text-black');
+            loginTab.classList.remove('border-gray-200', 'text-gray-500');
+            registerTab.classList.remove('border-black', 'text-black');
+            registerTab.classList.add('border-gray-200', 'text-gray-500');
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        });
+
+        registerTab.addEventListener('click', () => {
+            registerTab.classList.add('border-black', 'text-black');
+            registerTab.classList.remove('border-gray-200', 'text-gray-500');
+            loginTab.classList.remove('border-black', 'text-black');
+            loginTab.classList.add('border-gray-200', 'text-gray-500');
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+
+        // Form validation
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (form.checkValidity()) {
+                    // Here you would typically handle the form submission
+                    console.log('Form submitted successfully');
+                } else {
+                    form.reportValidity();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
